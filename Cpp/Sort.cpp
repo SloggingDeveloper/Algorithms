@@ -1,5 +1,6 @@
 #include "MergeSort.cpp"
 #include "InsertionSort.cpp"
+#include "BubbleSort.cpp"
 #include <iostream>
 
 int main(){
@@ -14,14 +15,14 @@ int main(){
         std::cin >> arr[i];
     }
 
-    InsertionSort sort;
+    BubbleSort sort;
     sort.Process(arr, n);
 
      for(int i = 0; i < n; i++){
         std::cout<< arr[i] << "\t";
     }
 
-   std::cout << "\n" << "Press any key to exit";
+   std::cout << "\n" << "Press any key to exit" << "\n";
    char input;
     std::cin >> input;
 }
