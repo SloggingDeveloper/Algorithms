@@ -1,6 +1,7 @@
 #include "MergeSort.cpp"
 #include "InsertionSort.cpp"
 #include "BubbleSort.cpp"
+#include "conio.h"
 #include <iostream>
 
 int main(){
@@ -23,6 +24,6 @@ int main(){
     }
 
    std::cout << "\n" << "Press any key to exit" << "\n";
-   char input;
-    std::cin >> input;
+    getch();
+    return 0;
 }
