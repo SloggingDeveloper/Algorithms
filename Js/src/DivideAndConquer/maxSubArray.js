@@ -36,53 +36,53 @@ const calculateMaxSubArray = function(arr, startIndex, endIndex){
 
 
           //mid array
-          let crossSectionArray = crossSectionMax(arr, maxLeftArray.endIndex, maxRightArray.startIndex);
+          let crossSectionMaxArray = crossSectionMax(arr, maxLeftArray.endIndex, maxRightArray.startIndex);
 
-          return calculateMaxSumOfMaxArray(maxLeftArray, maxRightArray, crossSectionArray, startIndex, endIndex);
+          return calculateMaxSumOfMaxArray(maxLeftArray, maxRightArray, crossSectionMaxArray, startIndex, endIndex);
           
     }
 
-    const calculateMaxSumOfMaxArray = function(maxLeftArray, maxRightArray, crossSectionArray, startIndex, endIndex){
-        var totalSum = maxLeftArray.maxValue + maxRightArray.maxValue + crossSectionArray.maxValue;         
+    const calculateMaxSumOfMaxArray = function(maxLeftArray, maxRightArray, crossSectionMaxArray, startIndex, endIndex){
+        var totalSum = maxLeftArray.maxValue + maxRightArray.maxValue + crossSectionMaxArray.maxValue;         
     
           
-          if(maxLeftArray.maxValue >= maxRightArray.maxValue && maxLeftArray.maxValue >= crossSectionArray.maxValue){
-              let sumOfSideArrays = maxLeftArray.maxValue + crossSectionArray.maxValue;
+          if(maxLeftArray.maxValue >= maxRightArray.maxValue && maxLeftArray.maxValue >= crossSectionMaxArray.maxValue){
+              let sumOfSideArrays = maxLeftArray.maxValue + crossSectionMaxArray.maxValue;
 
            if(sumOfSideArrays > totalSum && sumOfSideArrays > maxLeftArray.maxValue)
-             return {maxValue: sumOfSideArrays, startIndex: maxLeftArray.startIndex, endIndex: crossSectionArray.endIndex};
+             return {maxValue: sumOfSideArrays, startIndex: maxLeftArray.startIndex, endIndex: crossSectionMaxArray.endIndex};
           
              if(maxLeftArray.maxValue > totalSum)
              return maxLeftArray;
           }
 
-          if(maxRightArray.maxValue >= maxLeftArray.maxValue && maxRightArray.maxValue >= crossSectionArray.maxValue){
-             let sumOfSideArrays = maxRightArray.maxValue + crossSectionArray.maxValue;
+          if(maxRightArray.maxValue >= maxLeftArray.maxValue && maxRightArray.maxValue >= crossSectionMaxArray.maxValue){
+             let sumOfSideArrays = maxRightArray.maxValue + crossSectionMaxArray.maxValue;
 
           if(sumOfSideArrays > totalSum && sumOfSideArrays > maxRightArray.maxValue)
-            return {maxValue: sumOfSideArrays, startIndex: crossSectionArray.startIndex, endIndex: maxRightArray.endIndex};
+            return {maxValue: sumOfSideArrays, startIndex: crossSectionMaxArray.startIndex, endIndex: maxRightArray.endIndex};
          
             if(maxRightArray.maxValue > totalSum)
             return maxRightArray;
          }
                
 
-          if(crossSectionArray.maxValue >= maxLeftArray.maxValue && crossSectionArray.maxValue >= maxRightArray.maxValue){
-             let sumOfLeftSideArrays = crossSectionArray.maxValue + maxLeftArray.maxValue;
-            if(sumOfLeftSideArrays > totalSum && sumOfLeftSideArrays > crossSectionArray.maxValue){
-                return {maxValue: sumOfLeftSideArrays, startIndex: maxLeftArray.startIndex, endIndex: crossSectionArray.endIndex};    
+          if(crossSectionMaxArray.maxValue >= maxLeftArray.maxValue && crossSectionMaxArray.maxValue >= maxRightArray.maxValue){
+             let sumOfLeftSideArrays = crossSectionMaxArray.maxValue + maxLeftArray.maxValue;
+            if(sumOfLeftSideArrays > totalSum && sumOfLeftSideArrays > crossSectionMaxArray.maxValue){
+                return {maxValue: sumOfLeftSideArrays, startIndex: maxLeftArray.startIndex, endIndex: crossSectionMaxArray.endIndex};    
             }
             
-            let sumOfRightSideArrays = crossSectionArray.maxValue + maxRightArray.maxValue;
-            if(sumOfRightSideArrays > totalSum && sumOfRightSideArrays > crossSectionArray.maxValue){
-                return {maxValue: sumOfRightSideArrays, startIndex: crossSectionArray.startIndex, endIndex: maxRightArray.endIndex};    
+            let sumOfRightSideArrays = crossSectionMaxArray.maxValue + maxRightArray.maxValue;
+            if(sumOfRightSideArrays > totalSum && sumOfRightSideArrays > crossSectionMaxArray.maxValue){
+                return {maxValue: sumOfRightSideArrays, startIndex: crossSectionMaxArray.startIndex, endIndex: maxRightArray.endIndex};    
             }
 
-            if(crossSectionMax.maxValue > totalSum)
-            return crossSectionArray;
+            if(crossSectionMaxArray.maxValue > totalSum)
+            return crossSectionMaxArray;
           }
 
-          return {maxValue: totalSum, startIndex: startIndex, endIndex: endIndex};
+          return {maxValue: totalSum, startIndex: maxLeftArray.startIndex, endIndex: maxRightArray.endIndex};
     }
 
     module.exports = {
