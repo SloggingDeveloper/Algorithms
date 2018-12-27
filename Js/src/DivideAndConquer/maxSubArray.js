@@ -14,14 +14,22 @@ const calculateMaxSubArray = function(arr, startIndex, endIndex){
     if(startIndex == endIndex)
     return {maxValue:arr[startIndex], startIndex: startIndex, endIndex : endIndex };
 
-    if(startIndex + 1 === endIndex){
-        let max = arr[startIndex];
+    if (startIndex + 1 == endIndex)
+    {
+        let max = arr[endIndex];
+        let indexOfMaxElement = endIndex;
+        let indexOfMinElement = startIndex;
+        
+        if(arr[startIndex] > arr[endIndex]){
+         max = arr[startIndex];
+         indexOfMaxElement = startIndex;
+         indexOfMinElement = endIndex;
+        }
+       
+        if (max + arr[indexOfMinElement] > max)
+            return {maxValue: max + arr[endIndex], startIndex: startIndex, endIndex : endIndex};
 
-        if(max + arr[endIndex] > max)
-          return {maxValue:max + arr[endIndex], startIndex: startIndex, endIndex : endIndex }
-
-          return arr[endIndex] > max ? {maxValue : arr[endIndex], startIndex: endIndex, endIndex: endIndex}:
-          {maxValue: max, startIndex: startIndex, endIndex: startIndex};
+        return {maxValue: max, startIndex: indexOfMaxElement, endIndex : indexOfMaxElement};
     }
          
           const mid = (endIndex + startIndex + 1)/2;

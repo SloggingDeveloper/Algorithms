@@ -89,12 +89,20 @@ MaxSubArrayData MaxSubArray ::CalculateMaxSubArray(int arr[], int startIndex, in
 
     if (startIndex + 1 == endIndex)
     {
-        int max = arr[startIndex];
-
-        if (max + arr[endIndex] > max)
+        int max = arr[endIndex];
+        int indexOfMaxElement = endIndex;
+        int indexOfMinElement = startIndex;
+        
+        if(arr[startIndex] > arr[endIndex]){
+         max = arr[startIndex];
+         indexOfMaxElement = startIndex;
+         indexOfMinElement = endIndex;
+        }
+       
+        if (max + arr[indexOfMinElement] > max)
             return MaxSubArrayData(max + arr[endIndex], startIndex, endIndex);
 
-        return arr[endIndex] > max ? MaxSubArrayData(arr[endIndex], endIndex, endIndex) : MaxSubArrayData(max, startIndex, startIndex);
+        return MaxSubArrayData(max, indexOfMaxElement, indexOfMaxElement);
     }
 
     int midRounded = (endIndex + startIndex + 1) / 2;

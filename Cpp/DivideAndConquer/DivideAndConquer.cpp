@@ -4,8 +4,8 @@
 
 int main(int argc, char const *argv[])
 {
-    int arr[9] = {-2,-9,-2, 4, 1, 2, 1,-4,-1};
-    std :: cout << "finding max in [-2,-9,-2, 4, 1, 2, 1,-4,-1]" << "\n";
+    int arr[5] = {-1,2,3,3,-2};
+    std :: cout << "finding max in [-1,2,3,3,-2]" << "\n";
     
      MaxSubArray maxSubArray;
 
