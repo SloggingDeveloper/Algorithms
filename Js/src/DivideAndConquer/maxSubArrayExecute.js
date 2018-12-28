@@ -8,3 +8,5 @@ console.log('finding max sub array');
 console.log(arr);
 const result =array.calculateMaxSubArray(arr, 0, arr.length - 1);
 console.log(result);
+
+
