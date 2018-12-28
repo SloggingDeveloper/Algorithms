@@ -1,18 +1,26 @@
 #include "conio.h"
 #include <iostream>
 #include "MaxSubArray.cpp"
+#include "Matrix.cpp"
 
 int main(int argc, char const *argv[])
 {
-    int arr[5] = {-1,2,3,3,-2};
-    std :: cout << "finding max in [-1,2,3,3,-2]" << "\n";
+    // int arr[5] = {-1,2,3,3,-2};
+    // std :: cout << "finding max in [-1,2,3,3,-2]" << "\n";
     
-     MaxSubArray maxSubArray;
+    //  MaxSubArray maxSubArray;
 
-     MaxSubArrayData data = maxSubArray.CalculateMaxSubArray(arr, 0, (sizeof(arr)/sizeof(arr[0])) - 1);
+    //  MaxSubArrayData data = maxSubArray.CalculateMaxSubArray(arr, 0, (sizeof(arr)/sizeof(arr[0])) - 1);
 
-     std :: cout << "MaxValue:" << data.GetMaxValue() << " startIndex:" << data.GetStartIndex() << " endIndex:" << data.GetEndIndex() << "\n";
-     std :: cout << "press and key to exit..." << "\n";
+    //  std :: cout << "MaxValue:" << data.GetMaxValue() << " startIndex:" << data.GetStartIndex() << " endIndex:" << data.GetEndIndex() << "\n";
+    
+    int m1[3][3] = {{1,2,3}, {1,2,3}, {1,2,3}};
+    int m2[3][3] = {{1,2,3}, {1,2,3}, {1,2,3}};
+
+    Matrix matrix;
+   
+    matrix.Print(matrix.Multiply((int*)m1, (int*)m2, 3,3,3,3), 3, 3);
+      std :: cout << "press and key to exit..." << "\n";
      getchar();
      return 0;
 } 
