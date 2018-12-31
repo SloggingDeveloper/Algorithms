@@ -14,12 +14,12 @@ int main(int argc, char const *argv[])
 
     //  std :: cout << "MaxValue:" << data.GetMaxValue() << " startIndex:" << data.GetStartIndex() << " endIndex:" << data.GetEndIndex() << "\n";
     
-    int m1[3][3] = {{1,2,3}, {1,2,3}, {1,2,3}};
-    int m2[3][3] = {{1,2,3}, {1,2,3}, {1,2,3}};
+    int m1[2][2] = {{1,2}, {1,2}};
+    int m2[2][2] = {{1,2}, {1,2}};
 
     Matrix matrix;
    
-    matrix.Print(matrix.Multiply((int*)m1, (int*)m2, 3,3,3,3), 3, 3);
+    matrix.Print(matrix.MultiplyUsingStraussensMethod((int*)m1, (int*)m2, 2,2,2,2), 2, 2);
       std :: cout << "press and key to exit..." << "\n";
      getchar();
      return 0;

@@ -2,10 +2,10 @@
 
 void function(){
     const multiply = function(m1, m2){
-     return multiply4X4Matrix(m1, m2);
+     return multiply2X2Matrix(m1, m2);
     }
 
-    const multiply4X4Matrix = function(m1, m2){   
+    const multiply2X2Matrix = function(m1, m2){   
       const a = m1[0][0], b = m1[0][1], c = m1[1][0], d = m1[1][1],
       e = m2[0][0], f=m2[0][1], g = m2[1][0], h = m2[1][1];
 
