@@ -16,8 +16,7 @@
             "error",
             "never"
         ],
-        "array-callback-return": "error",
-        "array-element-newline": "error",
+        "array-callback-return": "error",        
         "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
@@ -55,11 +54,9 @@
         "eqeqeq": "error",
         "for-direction": "error",
         "func-call-spacing": "error",
-        "func-name-matching": "error",
-        "func-names": "error",
+        "func-name-matching": "error",        
         "func-style": [
-            "error",
-            "declaration"
+            "error"            
         ],
         "generator-star-spacing": "error",
         "getter-return": "error",
@@ -82,7 +79,7 @@
         "lines-around-comment": "error",
         "lines-around-directive": "error",
         "max-depth": "error",
-        "max-len": "error",
+        "max-len": [2, {"code": 100}],
         "max-lines": "error",
         "max-nested-callbacks": "error",
         "max-params": "error",
@@ -127,8 +124,7 @@
         "no-labels": "error",
         "no-lone-blocks": "error",
         "no-lonely-if": "error",
-        "no-loop-func": "error",
-        "no-magic-numbers": "error",
+        "no-loop-func": "error",        
         "no-mixed-operators": "error",
         "no-mixed-requires": "error",
         "no-multi-assign": "error",
@@ -198,8 +194,7 @@
                 "allowMultiplePropertiesPerLine": true
             }
         ],
-        "object-shorthand": "error",
-        "one-var": "error",
+        "object-shorthand": "error",        
         "one-var-declaration-per-line": "error",
         "operator-assignment": "error",
         "operator-linebreak": "error",
@@ -230,8 +225,7 @@
             "last"
         ],
         "sort-imports": "error",
-        "sort-keys": "off",
-        "sort-vars": "error",
+        "sort-keys": "off",        
         "space-before-blocks": "off",
         "space-before-function-paren": "off",
         "space-in-parens": [
