@@ -12,7 +12,7 @@ const multiply = function(m1, m2){
 
     for(let i = 0; i < rowsm1; i++){
         result[i] = [];
-        for(let j = 0;j < columnm2; j++){
+        for(let j = 0; j < columnm2; j++){
             result[i].push(defaultValue);
             for(let k = 0; k < columnsm1; k++){
             result[i][j] += m1[i][k] * m2[k][j];
@@ -33,7 +33,7 @@ const multiply = function(m1, m2){
           data = `${data} \n`;
     }
 
-    return data; 
+    return data;
 };
 
 module.exports = { multiply, format };

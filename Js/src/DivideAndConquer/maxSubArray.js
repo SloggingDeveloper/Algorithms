@@ -37,7 +37,9 @@ const calculateMaxSumOfMaxArray = function(maxLeftArray, maxRightArray, crossSec
          let sumOfSideArrays = maxRightArray.maxValue + crossSectionMaxArray.maxValue;
 
          if(sumOfSideArrays > totalSum && sumOfSideArrays > maxRightArray.maxValue){
-            return {maxValue: sumOfSideArrays, startIndex: crossSectionMaxArray.startIndex, endIndex: maxRightArray.endIndex};
+            return {maxValue: sumOfSideArrays,
+                startIndex: crossSectionMaxArray.startIndex,
+                endIndex: maxRightArray.endIndex};
         }
 
         if(maxRightArray.maxValue > totalSum){
@@ -58,7 +60,9 @@ const calculateMaxSumOfMaxArray = function(maxLeftArray, maxRightArray, crossSec
         let sumOfRightSideArrays = crossSectionMaxArray.maxValue + maxRightArray.maxValue;
 
         if(sumOfRightSideArrays > totalSum && sumOfRightSideArrays > crossSectionMaxArray.maxValue){
-            return {maxValue: sumOfRightSideArrays, startIndex: crossSectionMaxArray.startIndex, endIndex: maxRightArray.endIndex};
+            return {maxValue: sumOfRightSideArrays,
+                startIndex: crossSectionMaxArray.startIndex,
+                endIndex: maxRightArray.endIndex};
         }
 
         if(crossSectionMaxArray.maxValue > totalSum){
@@ -66,7 +70,9 @@ const calculateMaxSumOfMaxArray = function(maxLeftArray, maxRightArray, crossSec
         }
       }
 
-      return {maxValue: totalSum, startIndex: maxLeftArray.startIndex, endIndex: maxRightArray.endIndex};
+      return {maxValue: totalSum,
+        startIndex: maxLeftArray.startIndex,
+        endIndex: maxRightArray.endIndex};
 };
 
 const calculateMaxSubArray = function(arr, startIndex, endIndex){
@@ -76,7 +82,8 @@ const calculateMaxSubArray = function(arr, startIndex, endIndex){
 
     if (startIndex + 1 === endIndex){
         let max = arr[endIndex];
-        let indexOfMaxElement = endIndex, indexOfMinElement = startIndex;
+        let indexOfMaxElement = endIndex,
+        indexOfMinElement = startIndex;
 
         if(arr[startIndex] > arr[endIndex]){
          max = arr[startIndex];
@@ -104,9 +111,12 @@ const calculateMaxSubArray = function(arr, startIndex, endIndex){
           maxRightArray = calculateMaxSubArray(arr, midRounded + 1, endIndex),
 
           // Mid array
-          crossSectionMaxArray = crossSectionMax(arr, maxLeftArray.endIndex, maxRightArray.startIndex);
+          crossSectionMaxArray = crossSectionMax(arr, maxLeftArray.endIndex,
+            maxRightArray.startIndex);
 
-          return calculateMaxSumOfMaxArray(maxLeftArray, maxRightArray, crossSectionMaxArray, startIndex, endIndex);
+          return calculateMaxSumOfMaxArray(maxLeftArray,
+            maxRightArray, crossSectionMaxArray,
+            startIndex, endIndex);
     };
 
     module.exports = {calculateMaxSubArray};
