@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "eslint": "^5.12.0",
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "tsc": "tsc"
+}
+}
