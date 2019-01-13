@@ -2,6 +2,11 @@
 
 import {Epsilon} from './epsilonGreedyAlgorithm';
 
-const test = new Epsilon('1.1');
+const test = new Epsilon(1, 2);
 
-test.display();
+for(let i = 0; i < 1000; i++){
+   let armchosen = test.spinForArm();
+   test.updateRewardsForArm(armchosen, Math.random())
+}
+
+test.show();
