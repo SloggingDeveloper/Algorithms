@@ -1,0 +1,11 @@
+D:\Practice\C++\Algorithms\netcore\myApp\bin\Debug\netcoreapp2.2\myApp.deps.json
+D:\Practice\C++\Algorithms\netcore\myApp\bin\Debug\netcoreapp2.2\myApp.runtimeconfig.json
+D:\Practice\C++\Algorithms\netcore\myApp\bin\Debug\netcoreapp2.2\myApp.runtimeconfig.dev.json
+D:\Practice\C++\Algorithms\netcore\myApp\bin\Debug\netcoreapp2.2\myApp.dll
+D:\Practice\C++\Algorithms\netcore\myApp\bin\Debug\netcoreapp2.2\myApp.pdb
+D:\Practice\C++\Algorithms\netcore\myApp\obj\Debug\netcoreapp2.2\myApp.csprojAssemblyReference.cache
+D:\Practice\C++\Algorithms\netcore\myApp\obj\Debug\netcoreapp2.2\myApp.csproj.CoreCompileInputs.cache
+D:\Practice\C++\Algorithms\netcore\myApp\obj\Debug\netcoreapp2.2\myApp.AssemblyInfoInputs.cache
+D:\Practice\C++\Algorithms\netcore\myApp\obj\Debug\netcoreapp2.2\myApp.AssemblyInfo.cs
+D:\Practice\C++\Algorithms\netcore\myApp\obj\Debug\netcoreapp2.2\myApp.dll
+D:\Practice\C++\Algorithms\netcore\myApp\obj\Debug\netcoreapp2.2\myApp.pdb
