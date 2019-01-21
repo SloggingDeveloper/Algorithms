@@ -5,7 +5,7 @@ matrix = require('./matrix.js');
 
 
 // Matrix multiplication
-let m1 = [[1, 2], [1, 2]];
+let m1 = [[1, 2], [1, 2], [1, 2]];
 let m2 = [[1, 2], [1, 2]];
 
 console.log('currently multiplying: ');
