@@ -2,6 +2,8 @@
 
 import {Epsilon} from './epsilonGreedyAlgorithm';
 import {DegreeOfArray} from "./degreeOfArray";
+import {Randomize} from './randomize';
+
 const test = new Epsilon(0.2, 2);
 
 // for(let i = 0; i < 1000; i++){
@@ -11,6 +13,12 @@ const test = new Epsilon(0.2, 2);
 
 // test.show();
 
-let degreeOfArray = new DegreeOfArray();
+// let degreeOfArray = new DegreeOfArray();
 
-console.log(degreeOfArray.findMaxFrequecyWithLeastDistance([0,1,0,0,1,1,0]));
+// console.log(degreeOfArray.findMaxFrequecyWithLeastDistance([0,1,0,0,1,1,0]));
+
+let input = [2, 4, 5, 6];
+let randomObj = new Randomize(input);
+randomObj.randomizeInPlace();
+console.log(input);
+

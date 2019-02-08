@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "DivideAndConquer.cpp"
+                "-g", "practice.cpp"
             ],
             "group": {
                 "kind": "build",
