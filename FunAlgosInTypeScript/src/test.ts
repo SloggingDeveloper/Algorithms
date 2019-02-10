@@ -3,6 +3,7 @@
 import {Epsilon} from './epsilonGreedyAlgorithm';
 import {DegreeOfArray} from "./degreeOfArray";
 import {Randomize} from './randomize';
+import {BirthDayParadox} from './birthDayParadox';
 
 const test = new Epsilon(0.2, 2);
 
@@ -17,8 +18,12 @@ const test = new Epsilon(0.2, 2);
 
 // console.log(degreeOfArray.findMaxFrequecyWithLeastDistance([0,1,0,0,1,1,0]));
 
-let input = [2, 4, 5, 6];
-let randomObj = new Randomize(input);
-randomObj.randomizeInPlace();
-console.log(input);
+// let input = [2, 4, 5, 6];
+// let randomObj = new Randomize(input);
+// randomObj.randomizeInPlace();
+// console.log(input);
+
+console.log((new BirthDayParadox()).calculateMinimumNumberOfPeopleTwoHaveSameBirthDateByEquation(.5));
+
+
 
