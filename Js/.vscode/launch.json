@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/src\\DivideAndConquer\\matrixMultiplicationExecute.js"
+            "program": "${workspaceFolder}/src\\Sorting\\test.js"
         }
     ]
 }
