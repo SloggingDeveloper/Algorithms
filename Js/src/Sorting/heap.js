@@ -50,7 +50,20 @@ for(let i = Math.ceil(inputArr.length/2) -1; i > -1; i--){
     heapify(inputArr, i)
 }
   return inputArr;
-};    
+};
 
-module.exports = {heapify, buildMaxHeap};
+const sort = function(inputArr){
+    buildMaxHeap(inputArr);  // takes O(n)
+    let sortedArr = [];
+    for(let i = inputArr.length - 1; i >= 0; i--){
+        let temp = inputArr[i];
+        inputArr[i] = inputArr[0];
+        inputArr[0] = temp;
+        sortedArr[i] = inputArr.pop();
+        heapify(inputArr, 0);
+    }
+    return sortedArr;
+};
+
+module.exports = {heapify, buildMaxHeap, sort};
 })();
