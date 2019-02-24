@@ -19,6 +19,7 @@
        
      for(let k = 0; k < arr.length; k++){
          sortedArr[makeShiftArr[arr[k]] - 1] = arr[k];
+         makeShiftArr[arr[k]] = makeShiftArr[arr[k]] - 1;
      }
        return sortedArr;
     };

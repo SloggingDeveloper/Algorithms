@@ -8,5 +8,5 @@ const countingSort = require('./counting');
 // console.log('quicksort ' + quickSort.sort([14,3,8,6,9,1,22, 11], 0, 7));
 // console.log('quicksort randomized ' + quickSort.sort([14,3,8,6,9,1,22, 11], 0, 7));
 
-let result = countingSort.sort([14,3,8,6,9,1,22, 11]);
+let result = countingSort.sort([14,3,22,8,6,9,9,1,22, 11]);
 console.log(result);
