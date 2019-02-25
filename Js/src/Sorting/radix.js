@@ -41,7 +41,7 @@
         totalDigits += 1;
      }
 
-     return totalDigits;
+     return totalDigits; 
     }; 
 
     const sort = function(arr){
