@@ -42,7 +42,7 @@
      }
 
      return totalDigits;
-    };
+    }; 
 
     const sort = function(arr){
         let maxDigits = getNumberOfDigits(Math.max(...arr));
