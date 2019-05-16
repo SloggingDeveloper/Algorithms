@@ -45,18 +45,19 @@ var checkIfPalindromeWithoutUsingString = function (number) {
         result = Math.floor((result - reminder) / 10);
     }
 
-    var midPoint = Math.Ceil(arr.length/2);
+    var midPoint = Math.ceil(arr.length/2);
     var lastIndex = arr.length-1;
-    for (i = 0; i < midPoint-1; i++) {
-        if(lastIndex < i)
-        return true;
-
-        if(arr[i] !== arr[lastIndex--])
+    for (i = 0; i < midPoint; i++) {
+       if(arr[i] !== arr[lastIndex--])
         return false;        
     }
-
-    return reversedNumber;
+   
+    if(i > lastIndex) 
+    return true;
+    
+    return false;
 
 };
+
 
 
