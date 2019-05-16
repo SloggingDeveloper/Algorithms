@@ -77,6 +77,14 @@
             
         };
 
+        const findSuccessor = function(node){
+            
+        };
+
+        const findPredeccesor = function(node){
+
+        };
+
     }  
 
 
