@@ -1,5 +1,5 @@
 'use strict';
 
-const findCommonElements = require('./commonElements');
+const subseteliminateduplicate = require('./subset');
 
-findCommonElements([1,2,3,6,7,2],[11, 10, 6, 3, 24]);
+console.log(subseteliminateduplicate([1,2,2]));
