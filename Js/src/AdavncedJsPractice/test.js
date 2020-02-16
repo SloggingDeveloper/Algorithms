@@ -1,3 +1,1 @@
-const {countryList} = require('./promiseChaining');
-
-countryList.then(data => console.log(data)).catch(error => console.log(error));
+console.log('sunil ganiger'.replace(/(\w+)\s(\w+)/g, '$2 $1'))
