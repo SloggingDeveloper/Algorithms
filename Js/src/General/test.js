@@ -1,4 +1,5 @@
-// 'use strict';
-// const findAnagrams = require('./Anagrams');
-// const primes = require('./GeneratePrimes');
-// console.log(findAnagrams(["rob","bor","ad","bc"]));
+'use strict';
+const find = require('./pickStocksAtMost2');
+
+console.log(find([2,4,6,22,21,100]));
+ 
