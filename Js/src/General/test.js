@@ -1,3 +1,3 @@
-const getAll = require('./CombinationSum');
+const form = require('./constructTreeUsingTraversal');
 
-console.log(getAll([1,7,6],7));
+console.log(form([3,1,4,0],[0,1,3,4]));
