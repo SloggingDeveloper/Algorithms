@@ -1,5 +1,4 @@
 'use strict';
 
-const subseteliminateduplicate = require('./subset');
+const result = require('./interview');
 
-console.log(subseteliminateduplicate([1,2,2]));
