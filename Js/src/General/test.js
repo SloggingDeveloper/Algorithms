@@ -1,3 +1,3 @@
-const form = require('./constructTreeUsingTraversal');
+const getTree = require('./BalancedTreeUsingSortedArray');
 
-console.log(form([3,1,4,0],[0,1,3,4]));
+console.log(getTree([1,2,3,4]));
