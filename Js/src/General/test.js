@@ -1,3 +1,3 @@
-const getTree = require('./TreeUsingSortedArrayBottomToTop');
+const getResult = require('./CountAndSay');
 
-console.log(getTree([1,2,3,4]));
+console.log(getResult(5));
