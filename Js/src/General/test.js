@@ -1,2 +1,2 @@
-const generate = require('./generateValidParaentesis');
+const generate = require('./generateValidParaentesisOptimized');
 console.log(generate(3));
