@@ -1,2 +1,2 @@
-const generate = require('./generateValidParaentesisOptimized');
-console.log(generate(3));
+const generate = require('./greyCode');
+console.log(generate(2));
