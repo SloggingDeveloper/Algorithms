@@ -1,2 +1,2 @@
-const generate = require('./greyCodeUsingBitShift');
-console.log(generate(2));
+const match = require('./subStringKPM');
+console.log(match("abgrexmmabgmxabgtxnztxn", "abgmxabgtxn"));
