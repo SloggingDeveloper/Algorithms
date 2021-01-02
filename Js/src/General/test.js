@@ -1,5 +1,5 @@
 const readline = require('readline');
-const groups = require('./giftingGroup');
+const groups = require('./giftingGroupOptimized');
 
 const rl = readline.createInterface({
   input: process.stdin,
