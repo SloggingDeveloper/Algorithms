@@ -1,5 +1,5 @@
 const readline = require('readline');
-const groups = require('./giftingGroupOptimized');
+const convert = require('./IntegerToRoman');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,11 +10,11 @@ const rl = readline.createInterface({
 console.log("press ctrl+c once input is done");
 
 
-let input = [];
+let input = 0;
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
- input.push(data);
+ input = data;
 }).on('close',() => {
-    console.log(groups(input));   
+    console.log(convert(input));   
 });
