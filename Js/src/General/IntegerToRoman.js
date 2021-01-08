@@ -1,45 +1,43 @@
 (function () {
     'use strict';
+    const lookup = ['I','V','X','L','C','D','M'];
 
+    
     const convert = function (data) {
         let result = '';
+        let scale = 1000;
 
-        result += convertDigits(Number.parseInt(data / 1000), 'M', '', '');
-        data = data%1000;
-        
-        result += convertDigits(Number.parseInt(data / 100), 'C','M','D');
-        data = data%100;                       
-        
-        result += convertDigits(Number.parseInt(data / 10), 'X','C','L');
-        data = data%10;
-
-        result += convertDigits(data % 10, 'I','X','V');
+        for(let i = 6; i >= 0; i -= 2){
+            result += convertDigits(Number.parseInt(data / scale), i);           
+            data = data%scale;
+            scale = scale/10;
+        }
         return result;
     };
 
-    const convertDigits = function (digit, ones, nextHigherPlaceValue, fives) {
+    const convertDigits = function (digit, currentlookupPosition) {
         if (digit === 0)
             return '';
 
         if (digit === 9) {
-            return ones + nextHigherPlaceValue;
+            return lookup[currentlookupPosition] + lookup[currentlookupPosition + 2];
         }
 
         if (digit === 4)
-            return ones + fives;
+            return lookup[currentlookupPosition] + lookup[currentlookupPosition + 1];
 
         if (digit >= 5) {
-            let result = fives;
+            let result = lookup[currentlookupPosition + 1];
 
             for (let i = 1; i <= digit - 5; i++) {
-                result += ones;
+                result += lookup[currentlookupPosition];
             }
             return result;
         }
         
         let result = '';
         for (let i = 1; i <= digit; i++) {
-            result += ones;
+            result += lookup[currentlookupPosition];
         }
 
         return result;
