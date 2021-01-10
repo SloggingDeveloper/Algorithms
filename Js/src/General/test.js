@@ -1,5 +1,5 @@
 const readline = require('readline');
-const convert = require('./IntegerToRoman');
+const contains = require('./interleavingStrings');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,11 +10,11 @@ const rl = readline.createInterface({
 console.log("press ctrl+c once input is done");
 
 
-let input = 0;
+let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
- input = data;
+ input.push(data);
 }).on('close',() => {
-    console.log(convert(input));   
+    console.log(contains(input[0], input[1], input[2]));   
 });
