@@ -1,5 +1,5 @@
 const readline = require('readline');
-const contains = require('./interleavingStrings');
+const rotate = require('./rotateMatrix');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,7 +14,7 @@ let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
- input.push(data);
-}).on('close',() => {
-    console.log(contains(input[0], input[1], input[2]));   
+ input.push(data.split(' '));
+}).on('close',() => {  
+    console.log(rotate(input));   
 });
