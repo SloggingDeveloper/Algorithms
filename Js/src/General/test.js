@@ -1,5 +1,5 @@
 const readline = require('readline');
-const rotate = require('./rotateMatrix');
+const calculateMinJump = require('./jumpGame');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,7 +14,10 @@ let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
- input.push(data.split(' '));
+  for(let item of data.split(' ')){
+    input.push(Number.parseInt(item));
+  }
 }).on('close',() => {  
-    console.log(rotate(input));   
+  console.log(input);
+    console.log(calculateMinJump(input));   
 });
