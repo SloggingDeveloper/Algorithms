@@ -14,4 +14,4 @@
         return maxArea;
     };
     module.exports = getMaxArea;
-})()
+})();
