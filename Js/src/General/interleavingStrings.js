@@ -10,17 +10,17 @@
 
     const matrix = [];
 
-    for(let i = 0; i <= s2.length;i++){
+    for(let i = 0; i <= s1.length;i++){
         matrix[i] = [];
-        for(let j = 0; j <= s1.length; j++){
+        for(let j = 0; j <= s2.length; j++){
             matrix[i][j] = false;
         }
     }
 
     matrix[0][0] = true;
     
-    for(let i = 0; i <= s2.length;i++){       
-        for(let j = 0; j <= s1.length; j++){
+    for(let i = 0; i <= s1.length;i++){       
+        for(let j = 0; j <= s2.length; j++){
 
             if(i === 0 && j===0){
                 continue;
@@ -40,7 +40,7 @@
                 continue;
             }
             
-            if(s3[i+j-1] === s2[j-1] || s3[i+j-1] === s1[1-1]){
+            if(s3[i+j-1] === s2[j-1] || s3[i+j-1] === s1[i-1]){
                 matrix[i][j] = matrix[i-1][j] || matrix[i][j-1];
             }
 
