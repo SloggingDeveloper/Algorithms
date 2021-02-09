@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getMidCourse = require('./courseDependencies');
+const getMaxArea = require('./largestRectangle');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -19,12 +19,5 @@ rl.on('line', (data) => {
   }
 }).on('close',() => {  
   console.log(input);
-    console.log(getMidCourse([
-      ["Foundations of Computer Science", "Operating Systems"],
-      ["Data Structures", "Algorithms"],
-      ["Computer Networks", "Computer Architecture"],
-      ["Algorithms", "Foundations of Computer Science"],
-      ["Computer Architecture", "Data Structures"],
-      ["Software Design", "Computer Networks"]
-    ]));
+    console.log(getMaxArea(input));
 });
