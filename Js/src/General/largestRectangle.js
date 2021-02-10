@@ -11,8 +11,14 @@ const getMaxArea = function(input){
         if(currentArea > maxArea){
             maxArea = currentArea;
         }
-      i++;
-      j--;
+      
+        if(input[j] < input[i]){
+           j--;
+        }
+           else{
+             i++;
+           }
+      
     }
     return maxArea;
 };
