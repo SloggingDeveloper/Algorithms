@@ -7,7 +7,7 @@ const getMaxArea = function(input){
 
     while(i < j){
        
-        const currentArea = (j-i)*( input[j] < input[i]? input[j]:input[i]);
+        const currentArea = (j-i+1)*( input[j] < input[i]? input[j]:input[i]);
         if(currentArea > maxArea){
             maxArea = currentArea;
         }
