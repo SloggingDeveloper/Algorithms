@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getMaxArea = require('./largestRectangle');
+const getLength = require('./lastStringLength');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,10 +14,9 @@ let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-  for(let item of data.split(' ')){
-    input.push(Number.parseInt(item));
+    input = data;
   }
-}).on('close',() => {  
+).on('close',() => {  
   console.log(input);
-    console.log(getMaxArea(input));
+    console.log(getLength(input));
 });
