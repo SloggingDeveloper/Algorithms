@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getMaxArea = require('./largestRectangle');
+const getLength = require('./lastStringLength');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -18,5 +18,5 @@ rl.on('line', (data) => {
   }
 ).on('close',() => {  
   console.log(input);
-    console.log(getMaxArea([2,1,5,6,2,3]));
+    console.log(getLength(input));
 });

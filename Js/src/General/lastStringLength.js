@@ -6,17 +6,16 @@
    if(typeof input === 'undefined' || input.length === 0){
        return 0;
    }
-  let i = input.length-1, charaterCount=0, lastNonSpaceCharacterFound= false;  
+  let i = input.length-1, charaterCount=0;  
    
    while(i >=0){
-     if(input[i] === ' ' && lastNonSpaceCharacterFound){
+     if(input[i] === ' ' && charaterCount > 0){
          return charaterCount;
      }    
      if(input[i--] === ' '){        
          continue;
      }
-     charaterCount++;        
-     lastNonSpaceCharacterFound = true;
+     charaterCount++;     
    }
     
    return 0;
