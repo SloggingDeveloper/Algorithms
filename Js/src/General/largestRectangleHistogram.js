@@ -28,10 +28,10 @@ const getMaxArea = function(input){
     }
     
     i--;
-    if(stack.length > 0){
+
+    while(stack.length > 0){    
         const topElementIndex = stack.pop();
-        const area = input[topElementIndex]*(i-topElementIndex+1);
-       
+        const area = input[topElementIndex]*(i-topElementIndex+1);       
         if(maxArea < area)
             maxArea = area;         
     }
