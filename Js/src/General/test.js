@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getMaxArea = require('./largestRectangleHistogram');
+const getCombinations = require('./phoneNumber');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,13 +10,13 @@ const rl = readline.createInterface({
 console.log("press ctrl+c once input is done");
 
 
-let input = [];
+let input = '23';
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-    input.push(Number.parseInt(data));
+    input = data;
   }
 ).on('close',() => {  
   console.log(input);
-    console.log(getMaxArea(input));
+    console.log(getCombinations(input));
 });
