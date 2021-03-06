@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getCombinations = require('./phoneNumber');
+const getLongestCommonPrefix = require('./longestCommonPrefix');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,13 +10,13 @@ const rl = readline.createInterface({
 console.log("press ctrl+c once input is done");
 
 
-let input = '23';
+let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-    input = data;
+    input.push(data);
   }
 ).on('close',() => {  
   console.log(input);
-    console.log(getCombinations(input));
+    console.log(getLongestCommonPrefix(input));
 });
