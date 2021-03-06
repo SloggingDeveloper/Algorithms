@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getLongestCommonPrefix = require('./longestCommonPrefix');
+const getResult = require('./longestPalindromicSubstring');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,13 +10,12 @@ const rl = readline.createInterface({
 console.log("press ctrl+c once input is done");
 
 
-let input = [];
+let input = '';
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-    input.push(data);
+    input = data;
   }
 ).on('close',() => {  
-  console.log(input);
-    console.log(getLongestCommonPrefix(input));
+  console.log(getResult(input));
 });
