@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getResult = require('./longestNonRepetativeSubstring');
+const {getMaxDepth, Tree} = require('./maxDepthOfBinaryTree');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,5 +17,6 @@ rl.on('line', (data) => {
     input = data;
   }
 ).on('close',() => {  
-  console.log(getResult(input));
+  var inputData = new Tree(1, new Tree(2, null, new Tree(4, null, null)), new Tree(5, null, null));
+  console.log(getMaxDepth(inputData));
 });
