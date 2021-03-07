@@ -9,7 +9,7 @@
         for(let i = 0; i< arr.length; i++){
             for(let j = arr.length - 1; j >  i; j--){
                if(arr[i][j] && isPalindrome(i+1,j-1,arr))
-                 return input.slice(i,j+1);
+                  input.slice(i,j+1);
             }
         }
 

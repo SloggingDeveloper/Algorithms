@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getResult = require('./longestPalindromicSubstring');
+const getResult = require('./longestNonRepetativeSubstring');
 
 const rl = readline.createInterface({
   input: process.stdin,
