@@ -1,5 +1,5 @@
 const readline = require('readline');
-const {getMaxDepth, Tree} = require('./maxDepthOfBinaryTree');
+const getResult = require('./maxSubarray');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,13 +10,12 @@ const rl = readline.createInterface({
 console.log("press ctrl+c once input is done");
 
 
-let input = '';
+let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-    input = data;
+    input.push(Number.parseInt(data));
   }
-).on('close',() => {  
-  var inputData = new Tree(1, new Tree(2, null, new Tree(4, null, null)), new Tree(5, null, null));
-  console.log(getMaxDepth(inputData));
+).on('close',() => { 
+  console.log(getResult(input));
 });
