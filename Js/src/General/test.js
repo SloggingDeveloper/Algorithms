@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getLength = require('./lastStringLength');
+const getMedian = require('./mediaOfSortedArray');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,9 +14,8 @@ let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-    input = data;
+    input.push(Number.parseInt(data));
   }
-).on('close',() => {  
-  console.log(input);
-    console.log(getLength(input));
+).on('close',() => {   
+    console.log(getMedian([1,2],[2,4,6]));
 });
