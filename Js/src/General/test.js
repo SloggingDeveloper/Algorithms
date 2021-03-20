@@ -1,5 +1,9 @@
 const readline = require('readline');
+<<<<<<< HEAD
 const getMedian = require('./mediaOfSortedArray');
+=======
+const getResult = require('./maxSubarray');
+>>>>>>> 5a788ee8dbcdaedf7b2a6d52748f55181bb12350
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,5 +21,4 @@ rl.on('line', (data) => {
     input.push(Number.parseInt(data));
   }
 ).on('close',() => {   
-    console.log(getMedian([1,2],[2,4,6]));
-});
+    console.log(getMedian([1,2],[2,4,6])) } );
