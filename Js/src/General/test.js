@@ -1,6 +1,7 @@
 const readline = require('readline');
 const getResult = require('./mergeSortedArrays');
 
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -19,3 +20,4 @@ rl.on('line', (data) => {
 ).on('close',() => { 
   console.log(getResult([[1,8],[2,9],[3,5],[7,11]]));
 });
+
