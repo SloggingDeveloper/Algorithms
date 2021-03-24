@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getResult = require('./maxSubarray');
+const getResult = require('./mergeSortedArrays');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,5 +17,5 @@ rl.on('line', (data) => {
     input.push(Number.parseInt(data));
   }
 ).on('close',() => { 
-  console.log(getResult(input));
+  console.log(getResult([[1,8],[2,9],[3,5],[7,11]]));
 });
