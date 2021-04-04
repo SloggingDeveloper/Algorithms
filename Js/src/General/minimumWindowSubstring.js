@@ -6,10 +6,16 @@
         let i = 0, j = 0,
             minimumLength = Number.MAX_VALUE,
             start = 0, end = 0, minWindowMem = {},
+            expectedMinWindowMem = {},
             prevJ = -1;
 
         for (let item of substr) {
             minWindowMem[item] = 0;
+            if(typeof expectedMinWindowMem[item] === 'undefined'){
+                expectedMinWindowMem[item] = 0;
+            }
+
+            expectedMinWindowMem[item] += 1;
         }
 
         while (i < str.length && j < str.length && i <= j) {          
@@ -22,7 +28,7 @@
                 prevJ = j;
             }
 
-            if ((j - i + 1) >= substr.length && checkAllCharactersFound(minWindowMem)) {
+            if ((j - i + 1) >= substr.length && checkAllCharactersFound(minWindowMem, expectedMinWindowMem)) {
 
                 if ((j - i + 1) < minimumLength) {
                     minimumLength = j - i + 1;
@@ -53,9 +59,9 @@
         return str.substr(start, end - start + 1);
     }
 
-    const checkAllCharactersFound = function (minWindowMem) {
+    const checkAllCharactersFound = function (minWindowMem, expectedMinWindowMem) {
         for (let item in minWindowMem) {
-            if (minWindowMem.hasOwnProperty(item) && minWindowMem[item] <= 0)
+            if (minWindowMem[item] !== expectedMinWindowMem[item] )
                 return false;
         }
         return true;

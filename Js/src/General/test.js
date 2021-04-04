@@ -18,6 +18,6 @@ rl.on('line', (data) => {
     input.push(Number.parseInt(data));
   }
 ).on('close',() => { 
-  console.log(getResult('atrbbamtccba','abc'));
+  console.log(getResult('atrbbamtcacba','aac'));
 });
 
