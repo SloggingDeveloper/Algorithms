@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getResult = require('./minumumsumPath');
+const getResult = require('./minimumWindowSubstring');
 
 
 const rl = readline.createInterface({
@@ -18,6 +18,6 @@ rl.on('line', (data) => {
     input.push(Number.parseInt(data));
   }
 ).on('close',() => { 
-  console.log(getResult([[1,2,3],[0,1,6],[5,2,1]]));
+  console.log(getResult('atrbbamtcacba','aac'));
 });
 
