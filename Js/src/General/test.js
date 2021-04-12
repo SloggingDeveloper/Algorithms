@@ -1,5 +1,5 @@
 const readline = require('readline');
-const getResult = require('./nextPermutation');
+const getResult = require('./integerPalindrome');
 
 
 const rl = readline.createInterface({
@@ -18,6 +18,6 @@ rl.on('line', (data) => {
     input.push(Number.parseInt(data));
   }
 ).on('close',() => { 
-  console.log(getResult([5,6,1,3,2]));
+  console.log(getResult(0));
 });
 
