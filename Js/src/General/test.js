@@ -1,6 +1,7 @@
 const readline = require('readline');
 const getResult = require('./binaryTreeSumPath');
 const Tree = require('./Tree');
+const uniquePermutations = require('./uniquePermutations')
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,10 +15,10 @@ let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-  input.push( data === "null"? null : Number.parseInt(data));
+  input.push(Number.parseInt(data));
 }
 ).on('close', () => {
-   const tree = Tree.create(input);  
-   console.log(JSON.stringify(tree));
-  console.log(getResult(tree, -6));
+  let result = uniquePermutations(input);
+  console.log("length",result.length);
+  console.log(result);
 });
