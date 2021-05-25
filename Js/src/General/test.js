@@ -1,7 +1,5 @@
 const readline = require('readline');
-const getResult = require('./binaryTreeSumPath');
-const Tree = require('./Tree');
-const uniquePermutations = require('./uniquePermutations')
+const linkedTree = require('./nextRightPointer')
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -15,10 +13,10 @@ let input = [];
 
 rl.on('line', (data) => {
   // TODO: Log the answer in a database
-  input.push(Number.parseInt(data));
+  //input.push(Number.parseInt(data));
 }
 ).on('close', () => {
-  let result = uniquePermutations(input);
-  console.log("length",result.length);
-  console.log(result);
+  let result = linkedTree.formRightPointerTree(linkedTree.generateTest());  
+  console.log(JSON.stringify(result));
 });
+
