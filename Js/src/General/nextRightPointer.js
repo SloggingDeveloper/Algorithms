@@ -29,36 +29,55 @@
         let lasNode = null;
         while (currentLevelNodes > 0) {
             lasNode = queue.shift();
-            currentLevelNodes--;   
+            currentLevelNodes--;
             if (!lasNode)
-                continue;         
-                  
+                continue;
+
 
             queue.push(!lasNode.left ? null : lasNode.left);
-            queue.push(!lasNode.right ? null : lasNode.right); 
-            
-            if(previous === null){
+            queue.push(!lasNode.right ? null : lasNode.right);
+
+            if (previous === null) {
                 previous = lasNode;
             }
-            else{
-            previous.next = lasNode;
-            previous = lasNode;
-            }         
+            else {
+                previous.next = lasNode;
+                previous = lasNode;
+            }
         }
 
-        if(previous !== null)
-          previous.next = null;
+        if (previous !== null)
+            previous.next = null;
 
         construct(queue);
     };
 
-    const generateTest = function(){
-      let data = new TreeNext(1, null,
-         new TreeNext(2,null,new TreeNext(3, null, null, null),new TreeNext(4, null, null, null)),
-         new TreeNext(5, null, new TreeNext(6, null, null, null), new TreeNext(7, null, null, null)) 
-      );
-      return data;
+    const generateTest = function () {
+        let data = new TreeNext(1, null,
+            new TreeNext(2, null, new TreeNext(3, null, null, null), new TreeNext(4, null, null, null)),
+            new TreeNext(5, null, new TreeNext(6, null, null, null), new TreeNext(7, null, null, null))
+        );
+        return data;
     };
 
-    module.exports = { TreeNext, formRightPointerTree, generateTest };
+
+    const generateTestII = function () {
+        let data = new TreeNext(1, null, new TreeNext(2, null, null, null), new TreeNext(3, null, null, null));
+
+        return data;
+    };
+    const generateTestIII = function () {
+        let data = new TreeNext(1,null,new TreeNext(2,null,null,new TreeNext(3,null,null,null)),
+        new TreeNext(4,null,null,new TreeNext(5,null,null,null)));
+        return data;
+    };
+
+    const printResult = function (tree) {
+        if (!tree)
+            return;
+        console.log(tree.root, '->', tree.next ? tree.next.root : null);
+        printResult(tree.left);
+        printResult(tree.right);
+    };
+    module.exports = { TreeNext, formRightPointerTree, generateTest, generateTestII, generateTestIII, printResult };
 })();
