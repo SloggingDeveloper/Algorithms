@@ -1,6 +1,5 @@
 const readline = require('readline');
-const linkedTree = require('./nextRightPointer')
-const linkedTreeII = require('./nextRightTreeII')
+const {Tree, generateTest, fixSearchTree} = require('./ThreadedBinaryTree');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,9 +16,9 @@ rl.on('line', (data) => {
   //input.push(Number.parseInt(data));
 }
 ).on('close', () => {
-  let testdata = linkedTree.generateTestIII();
- // console.log(JSON.stringify(testdata));
-  let result = linkedTreeII(testdata);  
-  console.log(JSON.stringify(linkedTree.printResult(result)));
+  let testCase = generateTest();
+  testCase.printInorderTree();
+  fixSearchTree(testCase);
+  testCase.printInorderTree(); 
 });
 
