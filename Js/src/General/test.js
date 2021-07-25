@@ -1,5 +1,6 @@
 const readline = require('readline');
-const {Tree, generateTest, fixSearchTree} = require('./ThreadedBinaryTree');
+const EventEmitter = require('events');
+const pow = require('./power');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -12,13 +13,14 @@ console.log("press ctrl+c once input is done");
 let input = [];
 
 rl.on('line', (data) => {
-  // TODO: Log the answer in a database
-  //input.push(Number.parseInt(data));
+   
+   input.push(Number.parseInt(data));
+  if(input.length === 2){
+  var eventEmit = new EventEmitter();
+  eventEmit.emit('close');
+  }
 }
 ).on('close', () => {
-  let testCase = generateTest();
-  testCase.printInorderTree();
-  fixSearchTree(testCase);
-  testCase.printInorderTree(); 
+  console.log(pow(input[0], input[1]));
 });
 
