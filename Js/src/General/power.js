@@ -1,8 +1,11 @@
 (function () {
 
     const power = function (x, n) {
-        let mem = [0, x];
-        return divideAndCalculatePower(x, n, mem);
+        let mem = [0, x];        
+        var result = divideAndCalculatePower(x, Math.abs(n), mem);
+        if(n < 0)
+          result = 1/result;        
+          return result;
     };
 
     const divideAndCalculatePower = function (x, n, mem) {
