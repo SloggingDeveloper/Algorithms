@@ -1,6 +1,6 @@
 const readline = require('readline');
 const EventEmitter = require('events');
-const pow = require('./power');
+const {LinkedList, generateLinkedList, removeDuplicate} = require('./linkedListDuplicateRemoval');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -12,15 +12,12 @@ console.log("press ctrl+c once input is done");
 
 let input = [];
 
-rl.on('line', (data) => {
-   
-   input.push(Number.parseInt(data));
-  if(input.length === 2){
-  var eventEmit = new EventEmitter();
-  eventEmit.emit('close');
-  }
+rl.on('line', (data) => {   
+   input.push(Number.parseInt(data));   
 }
 ).on('close', () => {
-  console.log(pow(input[0], input[1]));
+  var linkedList = generateLinkedList(input);
+  linkedList.print();
+  console.log(removeDuplicate(linkedList).print());
 });
 
