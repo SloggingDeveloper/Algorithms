@@ -1,7 +1,7 @@
 const readline = require('readline');
 const EventEmitter = require('events');
-const { LinkedList, generateLinkedList } = require('./linkedListv1');
-const remove = require('./removeNthNodeFromEndLinkedList');
+const Tree = require('./Tree');
+const insertAtRow = require('./insertRowInTree');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -12,29 +12,36 @@ const rl = readline.createInterface({
 console.log("press ctrl+c once input is done");
 
 let input = [];
-let count = null;
-console.log("enter count:")
+let depth = null;
+let value = null;
+console.log("enter depth at which row needs to be inserted:")
 rl.on('line', (data) => {
   var parsedData = Number.parseInt(data);
-  if (count === null){
-    count = parsedData;
-    console.log('enter the elements of list');
+  if (depth === null){
+    depth = parsedData;
+    console.log('enter the value to be inserted:');
+    return;
   }
-  else
-    input.push(Number.parseInt(data));
+  
+  if(value === null){
+    value = parsedData;
+    console.log('enter the tree:');
+    return;
+  }
+  
+  if(data === 'null')
+   {
+     input.push(null);
+     return;
+   }
+    input.push(data);
 }
 ).on('close', () => {
-  var linkedList = generateLinkedList(input);
+  const tree = Tree.create(input);
   console.log("current linked list:")
-  linkedList.print();
+  console.log(JSON.stringify(tree));
 
-  let result = remove(linkedList, count);
-
-  console.log("result:")
-  if (result && result.constructor.name === LinkedList.name) {
-    result.print();
-  }
-  else
-    console.log(null);
+  const result = insertAtRow(tree,depth, value);
+  console.log(JSON.stringify(result));  
 });
 
