@@ -1,5 +1,5 @@
 const reader = require('../inputReader');
-const findCombination = require('./combinationSum');
+const findCombination = require('./combinationSumCount');
 
 console.log('first input target and then followed by the array');
 const input = [];
